@@ -1,0 +1,8 @@
+.env
+__pycache__
+*.so
+*.o
+venv/
+.aider/
+.aider.*
+.aider.*.*
