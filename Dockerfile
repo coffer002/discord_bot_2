@@ -3,6 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 ENV PYTHONPATH=/app:/app/math
+ENV PYTHONUNBUFFERED=1
 
 # Instala dependências do sistema para compilar C
 RUN apt-get update && apt-get install -y gcc make libc-dev && rm -rf /var/lib/apt/lists/*
