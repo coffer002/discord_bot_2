@@ -15,7 +15,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia o código-fonte
 COPY . .
 
-# Compila a biblioteca C para dentro da pasta src/math/
-RUN gcc -shared -fPIC -o /usr/local/lib/libmath.so math/math_engine.c -lm
+# Compila a biblioteca C para dentro da pasta src/math_tools/
+RUN gcc -shared -fPIC -o /usr/local/lib/libmath.so math_tools/math_engine.c -lm
+
+ENV PYTHONPATH=/app
 
 CMD ["python", "src/main.py"]
