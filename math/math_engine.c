@@ -6,16 +6,17 @@
 #define PI 3.14159265358979323846
 #define EULER_E 2.71828182845904523536
 
-#define ENABLE_LOGS 1
+static int enable_logs = 1; // 1 = True, 0 = False
+void set_math_logs(int state) {
+    enable_logs = state;
+}
 
-#if ENABLE_LOGS
-    #define LOG(fmt, ...) do { \
-        printf("[LOG] " fmt "\n", ##__VA_ARGS__); \
+#define LOG(fmt, ...) do { \
+    if (enable_logs) { \
+        printf("[LOG][math_engine] " fmt "\n", ##__VA_ARGS__); \
         fflush(stdout); \
-    } while(0)
-#else
-    #define LOG(fmt, ...)
-#endif
+    } \
+} while(0)
 
 
 typedef struct {
