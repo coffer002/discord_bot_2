@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Este é um comentário de uma linha ou de bloco em XML -->
+<config>
+
+    <!-- {user.mention} menciona o usuario, {user.name} é o nome unico do discord, o mesmo de adicionar amizade, {user.nickname} é o nome que mostra
+    aos outros por padrao, para mencionar outro canal use o padrao do discord "<#{channel.id}", mas para nao quebrar o xml use: &lt;#{channel.id}&gt  -->
+
+    <welcome_text>Olá {user.mention}! Seja muito bem vindo ao servidor e nao se esqueça de conferir as regras em &lt;#1569443187330650192&gt;.</welcome_text>
+
+
+    <!-- Lembrando que nao tem como mencionar no subtexto uma vez que ele estara imbutido na imagem -->
+
+    <welcome_subtext>Muitas boas vindas ao Covil do coffer! Se você não seguir as regras você vai ser mogado</welcome_subtext>
+
+</config>
